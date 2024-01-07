@@ -1,0 +1,1 @@
+This is a simple code for rock paper scissors game which will be updated continuously.
