@@ -2,22 +2,45 @@ body{
     display: flex;
     background-color: black;
     color: white;
-    align-items: center;
+    align-items:center;
     flex-direction: column;
-    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.header,.footer{
+    background:brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+    padding: 8px auto;
+    margin: 0;
+    width: 100%;
+    font-family: 'Tektur', sans-serif;
+    font-size: 30px;
 }
 
 .header{
-    font-family: 'Tektur', sans-serif;
-    font-size: 40px;
-    background-color:brown;
-    margin: 0px;
+    font-size: 80px;
+    max-height: 160px;
 }
 
 .buttons{
     display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content:center;
+    gap: 100px;
+    margin: 200px auto;
     
-    gap: 80px;
+}
+
+.buttons button{
+    border:5px solid royalblue;
+    border-radius: 20px;
+    padding: 5px;
+    flex: 1;
 }
 
 .footer{
