@@ -43,6 +43,10 @@ body{
     flex: 1;
 }
 
+.result{
+    margin-bottom: 40px;
+}
+
 .score{
     display: flex;
     justify-content: center;
