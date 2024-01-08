@@ -1,0 +1,26 @@
+body{
+    display: flex;
+    background-color: black;
+    color: white;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.header{
+    font-family: 'Tektur', sans-serif;
+    font-size: 40px;
+    background-color:brown;
+    margin: 0px;
+}
+
+.buttons{
+    display: flex;
+    
+    gap: 80px;
+}
+
+.footer{
+    flex: 1;
+}
+
