@@ -82,10 +82,25 @@ function draw(){
 
 const buttons=document.querySelectorAll('button');
 
-//event listener
-buttons.forEach((button)=>{
-    button.addEventListener('click',()=>{
-    const userChoice=button.id;
-    playRound(userChoice)    
+
+//event listener+game 
+
+function game() {    
+    function checkGameEnd() {
+        if (userScore === 5 || computerScore === 5) {
+            (userScore > computerScore)?alert("Get a life! Congrats"):alert("Hahaha... Lost to a computer!");
+            result.innerHTML="<p>Start New Game</p>"
+            computerScore=0;
+            userScore=0;
+        }
+    }
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const userChoice = button.id;
+            playRound(userChoice);
+            checkGameEnd();
+        });
     });
-});
+}
+
+game()
