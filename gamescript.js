@@ -1,3 +1,7 @@
+let userScore=0;
+let computerScore=0;
+
+
 function getComputerChoice()
 {
     const arr=["rock","paper",'scissors']
@@ -9,37 +13,72 @@ function playRound(userChoice){
     let computerChoice=getComputerChoice();
 
     if(userChoice==computerChoice){
-        alert("Draw")
+        alert(`Computer chose : ${computerChoice.toUpperCase()}`);
+        draw();
     }
 
     if(userChoice=="rock"){
+        
         if(computerChoice=="scissors"){
-            alert("You win")
+            alert(`Computer chose : ${computerChoice.toUpperCase()}`);  
+            win();
         }
         if(computerChoice=="paper"){
-            alert("You lose")
+            alert(`Computer chose : ${computerChoice.toUpperCase()}`);
+            loss();
         }
     }
 
     if(userChoice=="paper"){
+        
         if(computerChoice=="rock"){
-            alert("You win")
+            alert(`Computer chose : ${computerChoice.toUpperCase()}`);
+            win();
         }
         if(computerChoice=="scissors"){
-            alert("You lose")
+            alert(`Computer chose : ${computerChoice.toUpperCase()}`);
+            loss();
         }
     }
     
     if(userChoice=="scissors"){
+        
         if(computerChoice=="paper"){
-            alert("You win")
+            alert(`Computer chose : ${computerChoice.toUpperCase()}`);
+            win();
         }
         if(computerChoice=="rock"){
-            alert("You lose")
+            alert(`Computer chose : ${computerChoice.toUpperCase()}`);
+            loss();
         }
     }
 }
+const result=document.querySelector(".result");
+const compscore=document.querySelector(".computer .numeric");
+const uscore=document.querySelector(".user .numeric");
 
+function loss(){
+    computerScore++;
+    result.innerHTML="<p>You lost the last round</p>";
+    compscore.innerHTML=`<p>${computerScore}</p>`;
+    uscore.innerHTML=`<p>${userScore}</p>`;
+
+}
+
+function win(){
+    userScore++;
+    result.innerHTML="<p>You won the last round</p>";
+    compscore.innerHTML=`<p>${computerScore}</p>`;
+    uscore.innerHTML=`<p>${userScore}</p>`;
+}
+
+
+function draw(){
+    result.innerHTML="<p>Round drawn</p>";
+    compscore.innerHTML=`<p>${computerScore}</p>`;
+    uscore.innerHTML=`<p>${userScore}</p>`;
+
+}
 
 const buttons=document.querySelectorAll('button');
 
